@@ -1,0 +1,24 @@
+// initialize variable via arrow function to calculate sleep
+
+const getActualSleepHours = () => 6 + 7 + 9 + 8 + 5 + 10 + 11;
+const getIdealSleepHours = idealHours => idealHours * 7;
+
+const calculateSleepDebt = () => {
+
+  const actualSleepHours = getActualSleepHours();
+  const idealSleepHours = getIdealSleepHours(8);
+  
+  if (actualSleepHours === idealSleepHours) {
+      console.log('You got the perfect amount of sleep, nice one homie');
+  } else if (actualSleepHours > idealSleepHours) {
+    
+    //variable to change from a negative to positive num
+    let moreSleep = Math.abs((idealSleepHours - actualSleepHours));
+    console.log('You got ' + moreSleep + ' hours more sleep than needed');
+    
+  } else {
+    console.log('Dude You got ' + (idealSleepHours - actualSleepHours) + ' hour(s) less sleep than you needed this week. Get some rest.');
+  };
+}
+
+calculateSleepDebt();
